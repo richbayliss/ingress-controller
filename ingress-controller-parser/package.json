@@ -1,0 +1,70 @@
+{
+  "name": "ingress-controller-parser",
+  "description": "Parses an Ingress Controller definition YAML",
+  "version": "0.0.1",
+  "author": "Rich Bayliss",
+  "bin": {
+    "icp": "./bin/run"
+  },
+  "bugs": "https://github.com//ingress-controller-parser/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.8",
+    "@oclif/config": "^1.10.4",
+    "@oclif/plugin-help": "^2.1.4",
+    "@types/bluebird": "^3.5.25",
+    "@types/get-stdin": "^5.0.1",
+    "@types/js-yaml": "^3.11.4",
+    "@types/jsonpath": "^0.2.0",
+    "@types/lodash": "^4.14.119",
+    "bluebird": "^3.5.3",
+    "get-stdin": "^6.0.0",
+    "js-yaml": "^3.12.1",
+    "json-ptr": "^1.1.1",
+    "jsonpath": "^1.0.0",
+    "lodash": "^4.17.11",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.21.0",
+    "@oclif/test": "^1.2.2",
+    "@oclif/tslint": "^3.1.1",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "chai": "^4.2.0",
+    "globby": "^8.0.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com//ingress-controller-parser",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "icp",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "/ingress-controller-parser",
+  "scripts": {
+    "posttest": "tslint -p test -t stylish",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\""
+  },
+  "types": "lib/index.d.ts"
+}

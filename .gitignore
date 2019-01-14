@@ -1,0 +1,9 @@
+node_modules
+certs
+
+ingress-controller.yml
+docker-compose.yml
+
+*.cert
+*.key
+*.pem
